@@ -17,6 +17,8 @@ instalujte 64bitovou verzi JDK.
 
 Pro základní pochopení struktury programů si můžete vyzkoušet například [Google Blockly](https://developers.google.com/blockly/).
 
+Věci probírané na jednotlivých cvičeních naleznete na [zvláštní stránce](prubeh.md)
+
 ## Možnosti sestavení
 ### Debug
  - slouží k ladění aplikace
@@ -77,4 +79,7 @@ Pro základní pochopení struktury programů si můžete vyzkoušet například
     - při pozastaveném programu mohu v debugovacím okně přidat watch - sledování hodnoty výrazu
     - pravé tlačítko v okně *Variables*, pak *New Watch...* a vložit výraz ke sledování
 
-
+## Vstup a výstup
+  - načítání čísla z klávesnice není přímočaré (viz funkce `readInt()` a `readDouble()`)
+  - výpis do terminálu pomocí `System.out.println()`
+  - formátovaný výstup pomocí `System.out.format()`
