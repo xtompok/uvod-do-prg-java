@@ -19,6 +19,8 @@
 - vstup a výstup
 - převod mezi DMS a stupni
 - formátování výstupu
-- while cyklus
-- podmínky
 - formátování zdrojového kódu
+- podmínky
+
+## 3. cvičení
+- povede doc. Bayer

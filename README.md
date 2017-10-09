@@ -62,6 +62,8 @@ Věci probírané na jednotlivých cvičeních naleznete na [zvláštní stránc
  - podmínka
    - logický výraz, například `b < 10`
    - vrací pravda pro cokoli nenulového či nepravda pro false, NULL, "", 0, 0.0, ...
+   - `==` pro rovnost, pozor na záměnu s přiřazením
+   - `!=` pro nerovnost
 
 ## Ladění
   - pokud kliknu vlevo na číslo řádku, vložím *breakpoint* 
@@ -79,7 +81,22 @@ Věci probírané na jednotlivých cvičeních naleznete na [zvláštní stránc
     - při pozastaveném programu mohu v debugovacím okně přidat watch - sledování hodnoty výrazu
     - pravé tlačítko v okně *Variables*, pak *New Watch...* a vložit výraz ke sledování
 
+## Aritmetika
+  - používáme standardní matematické operátory
+  - nelze implicitně konvertovat `double` na `int`, protože ztráta dat za desetinnou čárkou
+  - pro explicitní přetypování `(jméno_typu) výraz`
+  - pozor na celočíselné dělení: `60/7` != `60/7.0`
+  - používejte závorky, pokud si nejste jistí
+  - mnoho užitečných funkcí najdete v [java.lang.Math](https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html)
+    - import pomocí `import static java.lang.Math.jméno_metody`
+
 ## Vstup a výstup
   - načítání čísla z klávesnice není přímočaré (viz funkce `readInt()` a `readDouble()`)
   - výpis do terminálu pomocí `System.out.println()`
   - formátovaný výstup pomocí `System.out.format()`
+    - `%d` pro int
+    - `%f` pro double
+    - `%.5f` vytiskne 5 míst za desetinnou čárkou
+    - `\n` vloží znak konce řádky
+    - přesnou specifikaci formátu naleznete [v dokumentaci](https://docs.oracle.com/javase/8/docs/api/java/util/Formatter.html#syntax)
+
