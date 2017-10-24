@@ -23,4 +23,10 @@
 - podmínky
 
 ## 3. cvičení
-- povede doc. Bayer
+- vedl doc. Bayer
+
+## 4. cvičení
+- problémy s double a int
+- výpočet vzdálenosti
+- řešení kvadratické rovnice
+    - vracení výsledku jako pole různé délky

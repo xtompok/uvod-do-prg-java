@@ -89,6 +89,7 @@ Věci probírané na jednotlivých cvičeních naleznete na [zvláštní stránc
   - používejte závorky, pokud si nejste jistí
   - mnoho užitečných funkcí najdete v [java.lang.Math](https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html)
     - import pomocí `import static java.lang.Math.jméno_metody`
+  - pokud používáme čísla s plovoucí řádovou čárkou (`double`, `float`), tak u hodnoty velké v aboslutní hodnotě mají nižší přesnost než `int` (viz 4. cvičení)
 
 ## Vstup a výstup
   - načítání čísla z klávesnice není přímočaré (viz funkce `readInt()` a `readDouble()`)
@@ -99,4 +100,12 @@ Věci probírané na jednotlivých cvičeních naleznete na [zvláštní stránc
     - `%.5f` vytiskne 5 míst za desetinnou čárkou
     - `\n` vloží znak konce řádky
     - přesnou specifikaci formátu naleznete [v dokumentaci](https://docs.oracle.com/javase/8/docs/api/java/util/Formatter.html#syntax)
+
+## Pole
+  - deklaruje se jako `typ jmeno_promenne []`
+  - definuje se jako `promenna = new typ[delka]`
+  - k prvkům se přistupuje pomocí `pole[index]`
+    - indexuje se od 0
+  - pomocí `System.out.println` nelze tisknout celé pole naráz
+  - nedefinované pole nemá délku a nelze přistupovat k jeho elementům
 
