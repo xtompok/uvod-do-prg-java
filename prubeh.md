@@ -45,7 +45,7 @@
 - do příště se objeví zadání úkolu
   - výpočet souřadnicových os z Kartografie
   - půjde odevzdávat přes GitHub
-  - deadline za 3 týdny
+  - deadline za 3 týdny (20.11., 8.00 SEČ)
   - pokud odevzdáte dřív, můžete dostat zpětnou vazbu
-
+- výpis prvočísel menších než n
 

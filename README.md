@@ -54,10 +54,7 @@ Věci probírané na jednotlivých cvičeních naleznete na [zvláštní stránc
    - == je porovnání, výsledek je pravda, pokud se levá strana rovná pravé, nepravda jinak
  
  - cyklus
-     - `for( inicializace; koncová_podmínka; krok){}`
-         - `inicializace` se provede na začátku
-         - při každém průběhu se kontroluje `podmínka`, cyklus běží, dokud je splněna
-         - na konci každého průběhu cyklu se provede `krok`
+   - viz Cykly
 
  - podmínka
    - logický výraz, například `b < 10`
@@ -97,7 +94,10 @@ Věci probírané na jednotlivých cvičeních naleznete na [zvláštní stránc
   - formátovaný výstup pomocí `System.out.format()`
     - `%d` pro int
     - `%f` pro double
+    - `%b` pro boolean
+    - `%s` pro string
     - `%.5f` vytiskne 5 míst za desetinnou čárkou
+    - `%6b` vytiskne boolean zarovnaný doprava na 6 znaků
     - `\n` vloží znak konce řádky
     - přesnou specifikaci formátu naleznete [v dokumentaci](https://docs.oracle.com/javase/8/docs/api/java/util/Formatter.html#syntax)
 
@@ -109,3 +109,20 @@ Věci probírané na jednotlivých cvičeních naleznete na [zvláštní stránc
   - pomocí `System.out.println` nelze tisknout celé pole naráz
   - nedefinované pole nemá délku a nelze přistupovat k jeho elementům
 
+## Logické spojky
+  - `!`,`&&`,`||`
+  - pracují pouze s booleany
+  - `!` je negace
+  - `&&` je operace AND
+  - `||` je operace OR
+  - pozor na záměnu, existuje i `|` a `&`, ty dělají operace po bitech
+
+## Cykly
+  - `for (pocatek;podminka;inkrement){/*kod*/}`
+    - na začátku provede `pocatek`, typicky `int i=0` a zkontroluje se `podminka`
+    - po konci každé iterace se provede `inkrement`, typicky `i++`
+    - po provedení inkrementu se zkontroluje `podminka`, typicky `i<10`
+        - pokud je splněna, vykoná se `kod`
+	- pokud není splněna, cyklus končí a pokračuje se příkazem za cyklem
+  - cykly se dají vnořovat
+    - pro vnitřní cyklus chcete použít jinou řídící proměnnou (obvykle `i`,`j`,`k`,`l`,...), jinak se vám vnější cyklus rozbije
