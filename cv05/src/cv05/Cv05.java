@@ -32,6 +32,7 @@ public class Cv05 {
         for (int i=0;i<4;i++){
             System.out.format("%6b | %6b | %6b | %6b | %6b\n", A[i],B[i],!A[i],A[i]&&B[i],A[i]||B[i]);
         }
+        System.out.println();
       
     }
     public static int readInt() throws IOException{
