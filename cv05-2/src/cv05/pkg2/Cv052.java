@@ -19,8 +19,36 @@ public class Cv052 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        //vypisPrvocisla(10);
+        printPrimes(260);
     }
+    
+    public static void printPrimes(int n){
+        for (int i=2;i<n;i++){
+            boolean prime = true;
+            for (int j=2;j<=i/2;j++){
+                if (i%j==0){
+                    prime = false;
+                    break;
+                }
+            }
+            if (prime){
+                System.out.println(i);
+            }
+        }
+    }
+    
+    public static void printPrimes2(int n){
+        for (int i=2;i<n;i++){
+            boolean prime = true;
+            for (int j=2;j<=i/2;j++){
+                prime = prime && (i%j != 0);
+            }
+            if (prime){
+                System.out.println(i);
+            }
+        }
+    }
+    
     
     public static int readInt() throws IOException{
         BufferedReader reader;
