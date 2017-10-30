@@ -19,7 +19,20 @@ public class Cv05 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-    
+        // Vystup
+        // A    B   NOT A   AND     OR
+        // 0    0       1       0       0
+        // 0    1       1       0       1
+        // ...
+        
+        boolean A[] = {false,false,true,true};
+        boolean B[] = {false,true,false,true};
+        
+        System.out.format("%6s | %6s | %6s | %6s | %6s\n","a","b","not a","and","or");
+        for (int i=0;i<4;i++){
+            System.out.format("%6b | %6b | %6b | %6b | %6b\n", A[i],B[i],!A[i],A[i]&&B[i],A[i]||B[i]);
+        }
+      
     }
     public static int readInt() throws IOException{
         BufferedReader reader;
