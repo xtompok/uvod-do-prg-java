@@ -22,11 +22,12 @@ Doporučuji pro psaní použít připravenou kostru `du1` dostupný v tomto adre
 ### Vstup
 Program bude interaktivní. Nejprve se zeptá uživatele na použité zobrazení,
 odpovědí bude jedno písmeno: 
-  - `L` - Lambertovo zobrazení
-  - `A` - Marinovo zobrazení 
-  - `B` - Braunovo zobrazení 
-  - `M` - Mercatorovo zobrazení 
-Definice zobrazení najdete v souboru <zobrazeni_vzorce.pdf>.
+- `L` - Lambertovo zobrazení
+- `A` - Marinovo zobrazení 
+- `B` - Braunovo zobrazení 
+- `M` - Mercatorovo zobrazení 
+
+Definice zobrazení najdete v souboru [zobrazeni_vzorce.pdf](zobrazeni_vzorce.pdf).
 Následně se zeptá uživatele na měřítko mapy, uživatel zadá číslo `x`, které bude
 odpovídat měřítku 1:x, například pokud zadá 50000000, bude se počítat s měřítkem
 1:50 000 000. Měřítko bude vždy celočíselné.
