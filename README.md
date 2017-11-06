@@ -106,6 +106,7 @@ Věci probírané na jednotlivých cvičeních naleznete na [zvláštní stránc
   - definuje se jako `promenna = new typ[delka]`
   - k prvkům se přistupuje pomocí `pole[index]`
     - indexuje se od 0
+  - počet prvků pole zjistíte pomocí `promenna.length`
   - pomocí `System.out.println` nelze tisknout celé pole naráz
   - nedefinované pole nemá délku a nelze přistupovat k jeho elementům
 
@@ -119,6 +120,7 @@ Věci probírané na jednotlivých cvičeních naleznete na [zvláštní stránc
 
 ## Cykly
   - `for (pocatek;podminka;inkrement){/*kod*/}`
+    - jednotlivé části deklarace se oddělují středníkem, nikoli čárkou
     - na začátku provede `pocatek`, typicky `int i=0` a zkontroluje se `podminka`
     - po konci každé iterace se provede `inkrement`, typicky `i++`
     - po provedení inkrementu se zkontroluje `podminka`, typicky `i<10`
@@ -126,3 +128,19 @@ Věci probírané na jednotlivých cvičeních naleznete na [zvláštní stránc
 	- pokud není splněna, cyklus končí a pokračuje se příkazem za cyklem
   - cykly se dají vnořovat
     - pro vnitřní cyklus chcete použít jinou řídící proměnnou (obvykle `i`,`j`,`k`,`l`,...), jinak se vám vnější cyklus rozbije
+
+## Funkce resp. metody
+  - TODO
+
+## Předávání kódu a aplikace dalším lidem
+### Zdrojáky
+  - v levém menu kliknout na projekt (ikona kávičky) → `Clean`
+    - smaže dočasné soubnory  
+  - v levém menu kliknout na projekt (ikona kávičky) → `Properties`
+    - v otevřeném ookně najdete cestu k adresáři se zdrojáky
+  - zkopírovat celý adresář se zdrojáky (např. `du1`)
+### Aplikace
+  - v menu `Run` dát `Clean and Build`
+  - pomocí předchozího návodu najít adresář s projektem
+  - v něm v adresáři dist je soubor .jar
+  - tento soubor zkopírovat, kam je třeba

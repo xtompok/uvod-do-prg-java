@@ -52,4 +52,4 @@
 ## 6. cvičení
 - zadání domácího úkolu
 - minimum, medián, maximum, průměr z pole
-- lineární interpolace
+- lineární interpolace (pro rychlé)
