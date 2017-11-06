@@ -49,3 +49,7 @@
   - pokud odevzdáte dřív, můžete dostat zpětnou vazbu
 - výpis prvočísel menších než n
 
+## 6. cvičení
+- zadání domácího úkolu
+- minimum, medián, maximum, průměr z pole
+- lineární interpolace
