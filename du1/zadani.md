@@ -89,8 +89,7 @@ du1.zip
 Před zabalením adresáře projektu dejte Clean, ať neposíláte zbytečně dočasné
 soubory. Zip archiv mi pošlete mailem. 
 
-Deadline bude buď 19.11. 8.03 nebo 20.11. 13.59 (bude odhlasováno na nejbližším
-cvičení). Úkoly odeslané po deadlinu budou brány jako neodevzdané. Pokud
+Deadline bude buď 19.11. 8.03. Úkoly odeslané po deadlinu budou brány jako neodevzdané. Pokud
 odevzdáte úkol vícekrát, budu hodnotit poslední odevzdání před deadlinem.
 Každému, kdo mi pošle úkol, odpovím, že jsem ho přijal a že se mi podařilo zip
 rozbalit. Pokud neodpovím, urgujte.
@@ -141,7 +140,8 @@ rovnoměrně rozdělím mezi autory.
 Zadejte zobrazeni:L
 Zadejte meritko:50000000
 Rovnobezky:-127,4 -125,5 -119,7 -110,4 -97,6 -81,9 -63,7 -43,6 -22,1 0,0 22,1
-43,6 63,7 81,9 97,6 110,4 119,7 125,5 127,4 Poledniky:-400,3 -378,1 -355,8
+43,6 63,7 81,9 97,6 110,4 119,7 125,5 127,4
+Poledniky:-400,3 -378,1 -355,8
 -333,6 -311,4 -289,1 -266,9 -244,6 -222,4 -200,2 -177,9 -155,7 -133,4 -111,2
 -89,0 -66,7 -44,5 -22,2 0,0 22,2 44,5 66,7 89,0 111,2 133,4 155,7 177,9 200,2
 222,4 244,6 266,9 289,1 311,4 333,6 355,8 378,1 400,3 
