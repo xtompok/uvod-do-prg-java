@@ -77,21 +77,25 @@ ve kterém bude adresář s projektem, soubor s dokumentací a jar soubor se
 sestavenou aplikací, tedy například:
 ```
 du1.zip
+|
+\du1_tomas_pokorny
   |- dokumentace.md
   |- du1.jar
    \ du1
-      |- build
+      |- build.xml
       |- src
       ...  
 ```
-Zip archiv mi pošlete mailem. 
+Před zabalením adresáře projektu dejte Clean, ať neposíláte zbytečně dočasné
+soubory. Zip archiv mi pošlete mailem. 
 
 Deadline bude buď 19.11. 8.03 nebo 20.11. 13.59 (bude odhlasováno na nejbližším
 cvičení). Úkoly odeslané po deadlinu budou brány jako neodevzdané. Pokud
 odevzdáte úkol vícekrát, budu hodnotit poslední odevzdání před deadlinem.
 Každému, kdo mi pošle úkol, odpovím, že jsem ho přijal a že se mi podařilo zip
-rozbalit. Pokud neodpovím, urgujte. Detaily pro odevzdání přes
-GitHub viz sekce *Odevzdání přes GitHub*.
+rozbalit. Pokud neodpovím, urgujte.
+
+Detaily pro odevzdání přes GitHub viz sekce *Odevzdání přes GitHub*.
 
 
 ### Předčasné odevzdání
