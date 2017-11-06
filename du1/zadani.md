@@ -34,9 +34,9 @@ odpovídat měřítku 1:x, například pokud zadá 50000000, bude se počítat s
 
 ### Výstup
 Po zadání parametrů program vypíše `Rovnobezky:` a následně seznam vzdáleností
-na svislé ose, kde byste kreslili rovnoběžky. 
+na svislé ose, kde byste kreslili rovnoběžky, od -90 po 90 stupňů. 
 Poté vypíše `Poledniky:` a seznam vzdáleností na vodorovné ose, kde byste
-kreslili poledníky. Poté program skončí (úspěšně, nikoli pádem).
+kreslili poledníky, od -180 po 180 stupňů. Poté program skončí (úspěšně, nikoli pádem).
 Všechny vypisované vzdálenosti se vypisují v centimetrech s přesností na
 milimetry, tedy například `23.7`. Pokud místo desetinné tečky program vypisuje
 desetinnou čárku, je to v pořádku.
@@ -129,8 +129,18 @@ tady. Soubor vhodně formátujte, například pomocí
 [MarkDownu](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet),
 inspiraci si vezměte například z tohoto souboru.
 
-### Příklad vstupu a výstupu
-TODO
+Postup, jak domácí úkol napsat, spolu klidně konzultujte, ale kód pište každý
+sám. Pokud objevím identické či nápadně podobné řešení, oboduji je jednou a body
+rovnoměrně rozdělím mezi autory. 
+
+### Příklad běhu programu
+Zadejte zobrazeni:L
+Zadejte meritko:50000000
+Rovnobezky:-127,4 -125,5 -119,7 -110,4 -97,6 -81,9 -63,7 -43,6 -22,1 0,0 22,1
+43,6 63,7 81,9 97,6 110,4 119,7 125,5 127,4 Poledniky:-400,3 -378,1 -355,8
+-333,6 -311,4 -289,1 -266,9 -244,6 -222,4 -200,2 -177,9 -155,7 -133,4 -111,2
+-89,0 -66,7 -44,5 -22,2 0,0 22,2 44,5 66,7 89,0 111,2 133,4 155,7 177,9 200,2
+222,4 244,6 266,9 289,1 311,4 333,6 355,8 378,1 400,3 
 
 
 ## Bonusové body
