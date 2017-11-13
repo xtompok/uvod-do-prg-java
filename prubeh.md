@@ -53,3 +53,12 @@
 - zadání domácího úkolu
 - minimum, medián, maximum, průměr z pole
 - lineární interpolace (pro rychlé)
+
+## 7. cvičení
+- otázky a odpovědi k domácímu úkolu
+- metody ještě jednou, důkladněji
+- fibonacciho čísla
+- binární vyhledávání
+
+## 8. cvičení
+- zjednodušování lomených čar
