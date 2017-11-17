@@ -144,3 +144,25 @@ Věci probírané na jednotlivých cvičeních naleznete na [zvláštní stránc
   - pomocí předchozího návodu najít adresář s projektem
   - v něm v adresáři dist je soubor .jar
   - tento soubor zkopírovat, kam je třeba
+
+## Práce s GitHubem v NetBeans
+### Vytvoření repozitáře a import do NetBeans
+  - zaregistrujeme se na GitHubu
+  - vytvoříme nový repozitář přes `New repository`
+  - zkopírujeme si URL z rámečku
+  - otevřeme NetBeansy
+  - otevřeme klonovací okno přes `Team -> Git -> Clone...`
+  - vložíme URL z GitHubu a přihlašovací údaje
+  - zvolíme, kam chceme repozitář naklonovat
+  - `Next`, `Next`, `Finish`
+  - pak se nás NetBeansy zeptají, jestli chceme vytvořit nový projekt, tak chceme
+  - vyplníme obvyklé údaje k novému projektu
+  - klikneme pravým na projekt v levém sloupci, `Git->Add` nám přidá všechny potřebné soubory
+  - pomocí `Team->Commit` uložíme nově vytvořený projekt do repozitáře
+
+### Práce s repozitářem
+  - provedeme změny ve zdrojovém kódu
+  - pomocí `Team->Add` je přidáme k věcem pro commit
+  - pomocí `Team->Commit` je uložíme do repozitáře, nezapomeneme napsat shruntí toho, co commitujeme
+  - pomocí `Team->Remote->Push to origin` propíšeme naše změny na GitHub. Na případné hlášky odpovídáme ano.
+
