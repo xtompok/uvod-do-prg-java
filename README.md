@@ -166,3 +166,32 @@ Věci probírané na jednotlivých cvičeních naleznete na [zvláštní stránc
   - pomocí `Team->Commit` je uložíme do repozitáře, nezapomeneme napsat shruntí toho, co commitujeme
   - pomocí `Team->Remote->Push to origin` propíšeme naše změny na GitHub. Na případné hlášky odpovídáme ano.
 
+
+## Tipy na psaní přehledného kódu
+  - funkce mají dělat to, co je v názvu
+      - podminkapol nemá dělit měřítkovým číslem
+  - na začátku ošetřit nekorektní vstupy
+    - dál v kódu je pak možno předpokládat korektní vstup, což šetří práci a nervy 
+  - kontrola vstupu ve `while(true)`
+    - pro interaktivní programy dává možnost uživateli se opravit
+    - pro neinteraktivní programy nevhodné
+  - negativní podmínky
+    - používat s mírou, vhodné pro ošetření nekorektních vstupů
+  - neopakovat kód, např. výpis rovnoběžky:
+    - ve funkcích by měl být výkonný kód
+    - v mainu lepidlo, které to celé drží pohromadě
+        - vypisuje hlášky na výstup
+	- zpracovává vstup od uživatele
+	- na jeho základě volá jednotlivé funkce
+  - neřetězit funkce
+    - není vhodné na konci funkce zavolat další dlouhou funkci, která od aktuální nepřebírá žádná data
+    - lepší je zavolat obě funkce postupně z mainu
+    - usnadňuje to porozumění kódu po částech
+  - přepočtové funkce jen na jednom místě
+    - snadno se zapomene při opravě opravit všechny výskyty
+  - nepoužívat `else` za dlouhým `if`ovým blokem
+    - když se člověk dočte k else, už neví, k jakému `if`u patří a kterou podmínku ten `if` testoval
+  - téměř každá funkce by se měla vejít na 1 obrazovku
+    - člověk má omezeně velký kontext, který zvládne aktivně držet v paměti
+  - používat prázdné řádky k oddělení logických částí kódu
+    - například část zpracování vstupu od výpočetní části

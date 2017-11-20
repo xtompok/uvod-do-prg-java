@@ -62,7 +62,7 @@
 
 ## 8. cvičení
 - implementace binárního vyhledávání
-- QuickSort
+- QuickSort si zkuste doma
 
 ## 9. cvičení
 - zjednodušování lomených čar
