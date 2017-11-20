@@ -61,4 +61,8 @@
 - binární vyhledávání
 
 ## 8. cvičení
+- implementace binárního vyhledávání
+- QuickSort
+
+## 9. cvičení
 - zjednodušování lomených čar
