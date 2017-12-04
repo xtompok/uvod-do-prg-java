@@ -25,13 +25,7 @@ public class Cv10 {
             String line;
             while ((line = br.readLine())!=null){
                 String [] items;
-                items = line.split(",");
-                int nums[];
-                nums = new int[items.length];
-                for (int i=0;i<items.length;i++){
-                    nums[i] = Integer.parseInt(items[i]);
-                    System.out.print(nums[i]);
-                }         
+                items = line.split(",");     
             }
         } catch (FileNotFoundException ex) {
             System.err.format("File %s not found",args[0]);
