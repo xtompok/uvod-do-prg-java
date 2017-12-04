@@ -66,3 +66,8 @@
 
 ## 9. cvičení
 - zjednodušování lomených čar
+
+## 10.cvičení
+- zadání domácího úkolu
+- stručný úvod do výjimek
+- práce se soubory
