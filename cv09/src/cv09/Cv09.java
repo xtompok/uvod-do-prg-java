@@ -17,6 +17,8 @@ import javax.swing.BorderFactory;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
+import static java.lang.Math.abs;
+import static java.lang.Math.sqrt;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -136,12 +138,71 @@ class Polyline {
     }
     
     // Generalizuje lomenou caru
-    // TODO: implementovat
     public Polyline generalize(){
-        Polyline p = new Polyline();
+        return gen_rec(this,0,xs.size()-1,100);
+      /*  Polyline p = new Polyline();
         for (int i=0;i<xs.size();i++){
             p.addPoint(xs.get(i)+5, ys.get(i)+5);
         }
+        return p;*/
+    }
+    
+    public static double dist(int []p1, int []p2, int []p0){
+        double upper = abs((p2[1]-p1[1])*p0[1] - (p2[0]-p1[0])*p0[1] +
+                p2[0]*p1[1] - p1[0]*p2[1]);
+        double lower = sqrt((p2[1]-p1[1])*(p2[1]-p1[1]) + (p2[0]-p1[0])*(p2[0]-p1[0]));
+        return upper/lower;
+       
+    }
+    
+    public static Polyline concat(Polyline a, Polyline b){
+        Polyline p;
+        p = new Polyline();
+        p.xs.addAll(a.xs);
+        p.xs.addAll(b.xs);
+        p.ys.addAll(a.ys);
+        p.ys.addAll(b.ys);
         return p;
     }
+    
+    /*
+    Kroky k vítězství:
+    - počítání vzdálenosti bodu od přímky
+    - hledání maximální vzdálenosti
+    - rekurze podle výsledků předchozího
+        - pokud jsem pod maximem, jen vrátím úsečku
+        - jinak dělím v maximálním bodu a rekurzím
+            - Polyline vrácené z rekurze slepím a vrátím
+    */
+    public static Polyline gen_rec(Polyline p, int start, int end, int h){
+        double maxdist = 0;
+        int maxdistidx = -1;
+        for (int i=start+1; i<=end-1;i++){
+            double d;
+            d = dist(p.getPoint(start),p.getPoint(end),p.getPoint(i));
+            System.out.println(d);
+            if (d > maxdist){
+                maxdist = d;
+                maxdistidx = i;
+            }
+        }
+        System.out.format("Max dist: %f\n",maxdist);
+        if (maxdist < h){
+            Polyline out;
+            out = new Polyline();
+            out.addPoint(p.getPoint(start));
+            out.addPoint(p.getPoint(end));
+            
+            return out;
+        }
+        Polyline p1;
+        Polyline p2;
+        p1 = gen_rec(p,start,maxdistidx,h);
+        p2 = gen_rec(p,maxdistidx,end,h);
+        return concat(p1,p2);
+    }
+    
+    // Nelze xs[5]
+    // a = xs.get(5), xs.set(5,b) <=> xs[5]=b
+    // xs.add(c)
 }
