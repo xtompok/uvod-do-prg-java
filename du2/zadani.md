@@ -63,7 +63,7 @@ du2.zip
 Před zabalením adresáře projektu dejte Clean, ať neposíláte zbytečně dočasné
 soubory. Zip archiv mi pošlete mailem. 
 
-Deadline bude buď 17.12. 8.03. Úkoly odeslané po deadlinu budou brány jako neodevzdané. Pokud
+Deadline bude 17.12. 8.03. Úkoly odeslané po deadlinu budou brány jako neodevzdané. Pokud
 odevzdáte úkol vícekrát, budu hodnotit poslední odevzdání před deadlinem.
 Každému, kdo mi pošle úkol, odpovím, že jsem ho přijal a že se mi podařilo zip
 rozbalit. Pokud neodpovím, urgujte.
