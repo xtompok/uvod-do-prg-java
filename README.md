@@ -160,12 +160,28 @@ Věci probírané na jednotlivých cvičeních naleznete na [zvláštní stránc
       - `str.equals("ahoj")` vrátí `true`, pokud řetězec str má obsah "ahoj".
       - `"ahoj".equals(str)` je ekvivalentní popis téhož
   - pro dělení řetězců podle nějakého znaku lze využít metodu `str.split(regex)`
-    - rozdělí podle TODO regulárního výrazu regex řetězec `str`
+    - rozdělí podle [regulárního výrazu](http://www.ocpsoft.org/opensource/guide-to-regular-expressions-in-java-part-1/) regex řetězec `str`
     - část odpovídající regexu se smaže a funkce vrátí pole stringů vzniklých roztržením původního stringu v místech, kde byl regex
     - `"123a45a55.4".split("a")` vrátí `[123, 45, 55.4]`
 
 ## Argumenty příkazové řádky
-  - TODO
+  - programu můžeme při spuštění předat parametry, které mohou upravovat jeho chování
+  - obvykle se tak děje při spouštění programu z příkazové řádky
+    - jar by se spustil jako `java -jar du2.jar -p 3 in.csv out.csv`
+    - argumenty z předchozího řádku jsou `-p`, `3`, `in.csv` a `out.csv`
+  - argumenty se oddělují mezerami
+    - pokud potřebujeme předat argument s mezerou, uzavřeme ho do uvozovek (`"`)
+  - z pohledu programu najdeme argumenty v proměnné `args` v mainu
+    - je to pole `String`ů
+    - každý argument je samostatný `String` v tomto poli, pořadí je stejné, jako bylo zadáno na příkazové řádce
+  - obvykle se argumenty používají následovně
+    - `-<pismeno>` je *přepínač*, slouží k (de)aktivaci nějaké funkce, TODO příklad
+    - `-<pismeno> <hodnota>` je *parametr*, slouží k nastavení nějaké hodnoty v programu, například exponentu v [du2](du2/zadani.md)
+    - `<retezec>` je obvykle název souboru, se kterým má program pracovat
+    - nejdříve se píšou přepínače a parametry, pak se píší soubory
+    - na pořadí souborů záleží, na pořadí přepínačů a parametrů nezáleží
+      - program by měl pracovat stejně nezávisle na pořadí přepínačů a parametrů
+  - v NetBeans nastavíme argumenty pomocí *pravý klik na projekt v levém menu*`->Properties->Run->Arguments`
 
 ## Výjimky
   - TODO
