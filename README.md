@@ -109,6 +109,10 @@ Věci probírané na jednotlivých cvičeních naleznete na [zvláštní stránc
   - počet prvků pole zjistíte pomocí `promenna.length`
   - pomocí `System.out.println` nelze tisknout celé pole naráz
   - nedefinované pole nemá délku a nelze přistupovat k jeho elementům
+  - pokud potřebujeme vícerozměrné pole, můžeme ho deklarovat a definovat obdobně jako jendorozměrné
+    - `typ jmeno_pole[][][]` deklaruje trojrozměrné pole typu `typ`
+    - `new typ[x][y][z]` definuje trojrozměrné pole s rozměry `x`, `y` a `z`
+    - `jmeno_pole[a][b][c]` přistoupí na prvek pole o souřadnicích `a`, `b` a `c`
 
 ## Logické spojky
   - `!`,`&&`,`||`
@@ -130,6 +134,40 @@ Věci probírané na jednotlivých cvičeních naleznete na [zvláštní stránc
     - pro vnitřní cyklus chcete použít jinou řídící proměnnou (obvykle `i`,`j`,`k`,`l`,...), jinak se vám vnější cyklus rozbije
 
 ## Funkce resp. metody
+  - TODO
+
+## Práce se soubory
+  - pokud chceme pracovat se souborem, musíme soubor nejdříve otevřít
+  - po konci práce (např. načtení celého souboru) je vhodné soubor zavřít
+    - pokud jsme do souboru zapisovali, je nutné ho zavřít, jinak se nemusí zapsat všechna data na disk
+  - čtení souboru
+    - například pomocí `BufferedReader`
+    - `BufferedReader br = new BufferedReader(new FileReader("cesta_k_souboru"))` otevře soubor pro čtení
+    - jednotlivé řádky čteme pomocí `br.readLine()`
+        - vrací `String` obsahující jeden řádek
+        - pokud vrátí `null`, není již nic dalšího v souboru ke čtení
+  - zápis do souboru
+    - například pomocí `PrintWriter`
+    - `PrintWriter pw = new PrintWriter("cesta_k_souboru")` otevře soubor pro zápis
+      - pokud již soubor existoval, smaže jeho obsah
+    - na objektu `pw` pak můžeme volat stejné metody jako např. na `System.out`
+      - `print`, `println`, `format`, ...
+    - na konci zápisu nezapomeneme soubor uzavřít
+
+## Práce s řetězci
+  - řetězce nelze porovnávat pomocí `==`, protože pak by se porovnávalo jejich umístění v paměti, nikoli obsah
+    - místo toho lze použít metodu `equals` na jednom objektu
+      - `str.equals("ahoj")` vrátí `true`, pokud řetězec str má obsah "ahoj".
+      - `"ahoj".equals(str)` je ekvivalentní popis téhož
+  - pro dělení řetězců podle nějakého znaku lze využít metodu `str.split(regex)`
+    - rozdělí podle TODO regulárního výrazu regex řetězec `str`
+    - část odpovídající regexu se smaže a funkce vrátí pole stringů vzniklých roztržením původního stringu v místech, kde byl regex
+    - `"123a45a55.4".split("a")` vrátí `[123, 45, 55.4]`
+
+## Argumenty příkazové řádky
+  - TODO
+
+## Výjimky
   - TODO
 
 ## Předávání kódu a aplikace dalším lidem
