@@ -4,8 +4,11 @@
 
 Pokud naměříme v prostoru nějaká data, často tato data mají smysl nejen v
 místě měření, ale hodilo by se nám i odhadnout, jak by měřená veličina vypadala
-v okolí naměřených dat. K tomuto účelu se používají interpolace. //
-Interpolace-mřížka, že bude IDW
+v okolí naměřených dat. K tomuto účelu se používají interpolace. Abychom mohli
+odhadovat vlastnosti veličiny na celé ploše, interpolujeme obvykle z naměřených
+bodů čtvercovou nebo obdélníkovou mřížku, nad kterou můžeme snadno provádět
+další analýzy. V tomto úkolu bude cílem naprogramovat metodu inverzní vážené
+vzdálenosti. 
 
 ## Zadání
 
@@ -14,7 +17,8 @@ inverzní vážené vzdálenosti (IDW). Program dostane jako argumenty vstupní 
 výstupní soubor a spočítá interpolaci vstupních dat v mřížových bodech sítě 100x100 bodů.
 Síť má takové rozměry, aby její krajní hrany obsahovaly body s minimálními
 respektive maximálními souřadnicemi. V základní verzi programu počítejte s
-pevným exponentem 2. 
+pevným exponentem 2. Při programování počítejte s tím, že vstupních bodů můžou
+být i desetitisíce.
 
 ### Vstup
 Vstupní i výstupní soubor je ve formátu CSV a obsahuje desetinná čísla (s desetinnou
@@ -24,7 +28,7 @@ a naměřenou hodnotu na těchto souřadnicích.
 
 ### Výstup
 Výstupní soubor bude obsahovat 100 řádků po 100 položkách, což budou
-interpolované hodnoty v mřížových bodech.
+interpolované hodnoty v mřížových bodech. Hodnoty zaokrouhlujte na dvě desetinná místa.
 
 ### Další požadavky
 Program by měl ošetřovat i nekorektní vstupy, v případě chyby nebo výjimky by
@@ -116,8 +120,9 @@ rovnoměrně rozdělím mezi autory.
 
 Za různé nadstavby k zadání můžete získat bonusové body. Pokud je uvedeno, že
 program může dostat nějaký parametr, pak pokud se vyskytují nějaké parametry,
-tak budou vždy před vstupním a výstupním souborem. Porgram by se tedy volal jako
-`java -jar soubor.jar -p 10 in.csv out.csv`.
+tak budou vždy před vstupním a výstupním souborem. Vzájemné pořadí parametrů
+může být libovolné. Program by se tedy volal jako `java -jar soubor.jar -p 10
+in.csv out.csv`. 
 
 ### Používání Gitu pro vývoj (1 b)
 
