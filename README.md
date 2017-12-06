@@ -134,7 +134,30 @@ Věci probírané na jednotlivých cvičeních naleznete na [zvláštní stránc
     - pro vnitřní cyklus chcete použít jinou řídící proměnnou (obvykle `i`,`j`,`k`,`l`,...), jinak se vám vnější cyklus rozbije
 
 ## Funkce resp. metody
-  - TODO
+  - ucelená pojmenovaná část kódu, která vykonává operaci na základě svých
+    vstupů a může vrátit nějaký výstup
+  - v klasických jazycích používáme pojem funkce
+  - v objektově orientovaných jazycích jsou funkce spojené s objekty nazývány
+    metodami
+  - funkce má vlastní jmenný prostor
+    - proměnné deklarované ve funkcích, které vedly k volání naší funkce nejsou
+      v naší funkci vidět
+    - proměnné použité v naší funkci nejsou vidět ani po návratu z funkce ani ve
+      funkcích zavolaných z naší funkce
+    - globální proměnné jsou vidět ze všech funkcí, ale měly by být používány s
+      rozvahou
+    - proměnné deklarované v hlavičče funkce se chovají jako by byly deklarované
+      na začátku funkce, jejich hodnota je inicializována dle argumentů, s
+      jakými byla funkce volána
+  - pokud chceme z funkce něco vrátit, použijeme příkaz `return`
+    - vrácená hodnota musí být stejného typu, jako bylo deklarováno v hlavičce
+    - funkce je po tomto příkazu okamžitě ukončena a pokračuje se vykonáváním
+      předchozí funkce
+  - hlavička funkce `public static navratovy_typ jmeno_funkce(typ_parametru_1
+    jmeno_parametru_1, typ_p_2 jmeno_p_2, ...){`
+    - za hlavičkou následuje tělo funkce ukončené `}`
+    - pokud funkce nic nevrací, je `navratovy_typ` `void`
+    - pokud funkce nebere žádné parametry, zapíší se za jméno funkce jen `()`
 
 ## Práce se soubory
   - pokud chceme pracovat se souborem, musíme soubor nejdříve otevřít
@@ -184,7 +207,33 @@ Věci probírané na jednotlivých cvičeních naleznete na [zvláštní stránc
   - v NetBeans nastavíme argumenty pomocí *pravý klik na projekt v levém menu*`->Properties->Run->Arguments`
 
 ## Výjimky
-  - TODO
+  - pokud nastane nějaká neočekávaná situace během vykonávání kódu, je obvykle vyhozena výjimka
+  - výjimka se začne zpracovávat a buď je někde zachycena, nebo celý program skončí a je vypsáno, kvůli které výjimce to bylo
+  - pokud chceme výjimku ošetřit, musíme kód, který ji vyvolává, obalit do try bloku a v catch bloku výjimku ošetřit
+  ```java
+try {
+	kod_vyvolavajici_vyjimku
+} catch (TridaVyjimky ex){
+	System.err.println("Nastala vyjimka!");
+	System.exit(1);	
+} catch (TridaJineVyjimky ex){
+	System.err.println("Nastala jina vyjimka!");
+}
+  ```
+  - pokud je vše v pořádku, vykoná se jen try blok
+  - pokud v `try` bloku nastane výjimka, vykonávání kódu se přeruší a skočí se na `catch` blok odpovídající typu nastalé výjimky
+  - v `catch` bloku lze situaci vyřešit nebo ukončit program
+  - pokud nedojde k ukončení programu, pokračuje se dále za posledním `catch` blokem k `try` bloku, ve kterém nastala výjimka
+  - pokud kód vyvolávající výjimku nebyl v `try` bloku, hledá se postupně v řetězu funkcí, které vedly k volání aktuálního kódu
+    - pokud se v řetězu najde funkce, která má aktuální volanou funkci v `try`
+      bloku a má `catch` blok pro aktuální typ výjimky, je vykonán tento catch
+      blok a dále se pokračuje ve vykonávání kódu za tímto blokem
+  - to jaké výjimky může vyhazovat nějaká funkce zjistíme pomocí `Ctrl-Mezerník`
+    na jménu funkce
+  - pokud některé typy výjimek neošetřujeme přímo ve funkci, je potřeba je
+    deklarovat v hlavičce funkce pomocí `throws`
+    - NetBeans nás obvykle na to upozorní a nabídne nám buď obklopení řádku nebo
+      bloku pomocí `try...catch` nebo úpravu hlavičky funkce
 
 ## Předávání kódu a aplikace dalším lidem
 ### Zdrojáky
