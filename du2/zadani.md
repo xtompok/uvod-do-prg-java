@@ -141,7 +141,7 @@ rovnoměrně rozdělím mezi autory.
 ```
 
 `out.csv`:
-TODO
+[out.csv](out.csv)
 
 ## Bonusové body
 
