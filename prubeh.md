@@ -71,3 +71,7 @@
 - zadání domácího úkolu
 - stručný úvod do výjimek
 - práce se soubory
+
+## 11.cvičení
+- konvexní obal
+- počítání obsahu
