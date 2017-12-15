@@ -115,12 +115,149 @@ class Point{
     
     // Vrati konvexni obal pole bodu
     public static Polyline convexHull(Point [] points){
-        // TODO implement convex hull
         Polyline hull;
         hull = new Polyline();
-        hull.addPoint(points[0]);
-        hull.addPoint(points[1]);
+       
+        Point left;
+        Point right;
+        
+        left = leftmost(points);
+        right = rightmost(points);
+        
+        Point next;
+        next = left;
+        hull.addPoint(next);
+        while (next!=right){
+            next = downHull(next, points);
+            hull.addPoint(next);
+        }
+        while (next!=left){
+            next = upHull(next,points);
+            hull.addPoint(next);
+        }
+        
         return hull;
+    }
+    
+    // Vrati nejlevejsi bod
+    public static Point leftmost(Point [] points){
+        Point leftmost;
+        int minx;
+        minx = points[0].x;
+        leftmost = points[0];
+        for (int i=0;i<points.length;i++){
+            if (minx > points[i].x){
+                minx = points[i].x;
+                leftmost = points[i];
+            }
+        }
+        return leftmost;
+    }
+    
+    // Vrati nejpravejsi bod
+    public static Point rightmost(Point [] points){
+        Point rightmost;
+        int maxx;
+        maxx = points[0].x;
+        rightmost = points[0];
+        for (int i=0;i<points.length;i++){
+            if (maxx < points[i].x){
+                maxx = points[i].x;
+                rightmost = points[i];
+            }
+        }
+        return rightmost;
+    }
+    
+    // Vrati status bodu b proti bodu a pri dolni pulce obalu
+    // -1 - nezajimej se o nej (nad nebo za bodem a)
+    //  0 - pridej ho do porovnani podle uhlu
+    //  1 - vezmi ho hned, je to nejlepsi kandidat (svisle dolu)
+    public static int downstatus(Point a, Point b){
+        if (a==b){
+            return -1;
+        }
+        if (a.x > b.x){
+            return -1;
+        }
+        if ((a.x==b.x)&&(b.y <= a.y)){
+            return -1;
+        }
+        if ((a.x==b.x)&&(b.y > a.y)){
+            return 1;
+        }
+        return 0;   
+    }
+    
+    //  Vrati status bodu b proti bodu a pri horni pulce obalu
+    //  Viz downstatus
+    public static int upstatus(Point a, Point b){
+        if (a==b){
+            return -1;
+        }
+        if (a.x < b.x){
+            return -1;
+        }
+        if ((a.x==b.x)&&(b.y < a.y)){
+            return 1;
+        }
+        if ((a.x==b.x)&&(b.y >= a.y)){
+            return -1;
+        }
+        return 0;   
+    }
+    
+    // Vrati pomer dy/dx, coz aproximuje uhel pro porovnavani
+    public static double angle(Point a, Point b){
+        return (((double)b.y-a.y)/((double)b.x-a.x));
+    }
+    
+    // Najde dolni pulku konvexniho obalu
+    public static Point downHull(Point p, Point [] points){
+        Point next;
+        double angmax = Double.NEGATIVE_INFINITY;
+        next = null;
+        for (int i=0;i<points.length;i++){
+            int st;
+            st = downstatus(p,points[i]);
+            if (st==1){
+                return points[i];
+            }
+            if (st==-1){
+                continue;
+            }
+            double ang;
+            ang = angle(p, points[i]);
+            if (ang > angmax){
+                angmax = ang;
+                next = points[i];
+            }
+        }
+        return next;
+    }
+    
+    // Najde horni pulku konvexniho obalu
+     public static Point upHull(Point p, Point [] points){
+        Point next;
+        double angmax = Double.NEGATIVE_INFINITY;
+        next = null;
+        for (int i=0;i<points.length;i++){
+            int st;
+            st = upstatus(p,points[i]);
+            if (st==1){
+                return points[i];
+            }
+            if (st==-1){
+                continue;
+            }
+            double ang;
+            ang = angle(p, points[i]);
+            if (ang > angmax){
+                angmax = ang;
+                next = points[i];
+            }
+        }
+        return next;
     }
 }
 
