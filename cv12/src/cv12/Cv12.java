@@ -116,7 +116,16 @@ class Point{
     
     // Spocita plochu konvexniho obalu
     public static double area(Point [] points, Polyline hull){
-        return 0;
+        double area;
+        area = 0;
+        for (int i=0;i<hull.xs.size()-1;i++){
+            int [] p1;
+            int [] p2;
+            p1 = hull.getPoint(i);
+            p2 = hull.getPoint(i+1);
+            area += (p2[0]-p1[0])*(p2[1]+p1[1])/2.0;
+        }
+        return area;
     }
     
     // Vrati konvexni obal pole bodu
