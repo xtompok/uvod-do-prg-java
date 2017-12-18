@@ -39,6 +39,8 @@ Výstupem bude zdrojový kód programu (pro kontrolu správnosti) a zpráva v PD
 Napište si funkce na jednotlivé třídící algoritmy. Nejprve se věnujte zdrojovému
 kódu a nechte si ho zkontrolovat, ať pak nemusíte předělávat grafy a zdůvodnění.  
 
+Pro měření rychlosti požijte `System.nanoTime()`.
+
 ### Odevzdání
 Odevzdávat budete kompletní zdrojové kódy projektu a zprávu s grafy a zdůvodněními. Vše
 bude zabalené v zip souboru, který bude obsahovat adresář `du3_jmeno_prijmeni`,
