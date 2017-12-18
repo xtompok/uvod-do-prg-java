@@ -32,7 +32,9 @@ Výsledky vyneste do grafů a odůvodněte.
 Program 
 
 ### Výstup
-Výstupem bude zdrojový kód programu (pro kontrolu správnosti) a zpráva v PDF s grafy a zdůvodněními.
+Výstupem bude zdrojový kód programu (pro kontrolu správnosti) a zpráva v PDF s
+popisy iomplementovaných algoritmů, grafy, zdůvodněními a použitou metodikou
+měření (kolikrát jste měřili jaká data, jak jste generovali data, ...).
 
 ### Doporučení
 
@@ -40,6 +42,9 @@ Napište si funkce na jednotlivé třídící algoritmy. Nejprve se věnujte zdr
 kódu a nechte si ho zkontrolovat, ať pak nemusíte předělávat grafy a zdůvodnění.  
 
 Pro měření rychlosti požijte `System.nanoTime()`.
+
+Rychlost berte jako průměr časů z více třídění dat dané velikosti (desítky běhů u malých polí, jednotky běhů u velkých polí).
+Měřte pouze rychlost třídění, nikoli čas potřebný na generování vstupu či jiné podpůrné operace.
 
 ### Odevzdání
 Odevzdávat budete kompletní zdrojové kódy projektu a zprávu s grafy a zdůvodněními. Vše
