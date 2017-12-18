@@ -67,11 +67,15 @@
 ## 9. cvičení
 - zjednodušování lomených čar
 
-## 10.cvičení
+## 10. cvičení
 - zadání domácího úkolu
 - stručný úvod do výjimek
 - práce se soubory
 
-## 11.cvičení
+## 11. cvičení
 - konvexní obal
+
+## 12. cvičení
 - počítání obsahu
+- analýza časové složitosti
+
