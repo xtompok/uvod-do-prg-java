@@ -7,5 +7,5 @@
 |Martin Hofrajtr|16	|6	|	|22	|
 |Ondřej Klauda	|12	|0	|	|12	|
 |Markéta Šudová	|8	|0	|	|8	|
-|Jan Čermák	|15	|7	|	|22	|
+|Jan Čermák	|15	|10	|	|25	|
 
