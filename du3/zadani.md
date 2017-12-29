@@ -20,7 +20,7 @@ Napište program porovnávající jednotlivé třídící algoritmy, porovnejte 
 rychlosti a zdůvodněte, proč se chovají tak, jak se chovají. Implementujte 2
 "rychlé" a 2 "pomalé" třídící algoritmy, z toho jeden z rychlých musí být
 Quicksort. Změřte rychlost běhu jednotlivých algoritmů na datech velikostí
-*10^k*, kde *k=2,3,...8*. Změřte na
+*10^k*, kde *k=2,3,...6*. Změřte na
 následujících typech dat:
  - náhodné integery
  - stříděné integery
