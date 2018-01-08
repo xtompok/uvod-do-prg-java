@@ -80,7 +80,5 @@
 - analýza časové složitosti
 
 ## 13. cvičení
-- otázky k domácímu úkolu
-- anotace letního semestru
-- jiné jazyky
-- hledání minimální kostry
+- povídání
+- pojídání cukroví
